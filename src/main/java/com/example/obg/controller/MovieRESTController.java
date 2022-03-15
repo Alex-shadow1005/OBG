@@ -17,6 +17,9 @@ public class MovieRESTController {
   @Autowired
   MovieRepository movieRepository;
 
+  @GetMapping("/")
+  public String index() { return "hello world";}
+
   @GetMapping("/movies")
   public List<Movie> getAllMovies() {
     return movieRepository.findAll();
@@ -41,9 +44,9 @@ public class MovieRESTController {
   }
 
   @PutMapping("/movie/{id}")
-  public ResponseEntity<Movie> updateCount(@PathVariable String id, @RequestBody Movie movie) {
-    Optional<Movie> optCounty = movieRepository.findById(id);
-    if (optCounty.isPresent()) {
+  public ResponseEntity<Movie> updateMovie(@PathVariable String id, @RequestBody Movie movie) {
+    Optional<Movie> optMovie = movieRepository.findById(id);
+    if (optMovie.isPresent()) {
       movieRepository.save(movie);
       return new ResponseEntity<Movie>(movie,HttpStatus.OK);
     } else {

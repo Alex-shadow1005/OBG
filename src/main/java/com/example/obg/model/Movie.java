@@ -10,11 +10,11 @@ public class Movie {
   @Column(name="movies")
   private int movieID;
   private String movieName;
-  private String movielength;
+  private int movielength;
   private String description;
   private String genre;
-  private int PGrating;
-  private String releaseDate;
+  private String PGrating;
+  private int releaseDate;
 
 
   public int getMovieID() {
@@ -33,11 +33,11 @@ public class Movie {
     this.movieName = movieName;
   }
 
-  public String getMovielength() {
+  public int getMovielength() {
     return movielength;
   }
 
-  public void setMovielength(String movielength) {
+  public void setMovielength(int movielength) {
     this.movielength = movielength;
   }
 
@@ -57,33 +57,20 @@ public class Movie {
     this.genre = genre;
   }
 
-  public int getPGrating() {
+  public String getPGrating() {
     return PGrating;
   }
 
-  public void setPGrating(int PGrating) {
+  public void setPGrating(String PGrating) {
     this.PGrating = PGrating;
   }
 
-  public String getReleaseDate() {
+  public int getReleaseDate() {
     return releaseDate;
   }
 
-  public void setReleaseDate(String releaseDate) {
+  public void setReleaseDate(int releaseDate) {
     this.releaseDate = releaseDate;
-  }
-
-  @Override
-  public String toString() {
-    return "Movie{" +
-        "movieID=" + movieID +
-        ", movieName='" + movieName + '\'' +
-        ", movielength='" + movielength + '\'' +
-        ", description='" + description + '\'' +
-        ", genre='" + genre + '\'' +
-        ", PGrating=" + PGrating +
-        ", releaseDate='" + releaseDate + '\'' +
-        '}';
   }
 }
 
