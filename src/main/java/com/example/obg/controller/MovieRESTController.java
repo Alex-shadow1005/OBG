@@ -40,7 +40,7 @@ public class MovieRESTController {
     return movieRepository.save(movie);
   }
 
-  @PutMapping("/county/{id}")
+  @PutMapping("/movie/{id}")
   public ResponseEntity<Movie> updateCount(@PathVariable String id, @RequestBody Movie movie) {
     Optional<Movie> optCounty = movieRepository.findById(id);
     if (optCounty.isPresent()) {
