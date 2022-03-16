@@ -39,7 +39,6 @@ public class MovieRESTController {
   @PostMapping("/movie")
   @ResponseStatus(HttpStatus.CREATED)
   public Movie postMovie(@RequestBody Movie movie) {
-    System.out.println(movie);
     System.out.println("movie is = " + movie);
     return movieRepository.save(movie);
   }
@@ -52,7 +51,7 @@ public class MovieRESTController {
       return new ResponseEntity<Movie>(movie,HttpStatus.OK);
     } else {
       Movie notfoundMovie = new Movie();
-      notfoundMovie.setMovieName("Jeg kunne ikke finde id=" + id);
+      notfoundMovie.setMovie_name("Jeg kunne ikke finde id=" + id);
       return new ResponseEntity<Movie>(notfoundMovie, HttpStatus.NOT_FOUND);
     }
   }

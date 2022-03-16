@@ -9,12 +9,12 @@ public class Movie {
   @Id
   @Column(name="movieID")
   private int movieID;
-  private String movieName;
-  private int movieLength;
+  private String movie_name;
+  private int movie_length;
   private String description;
   private String genre;
-  private String pgRating;
-  private int releaseDate;
+  private String pg_rating;
+  private int release_date;
 
 
   public int getMovieID() {
@@ -25,20 +25,20 @@ public class Movie {
     this.movieID = movieID;
   }
 
-  public String getMovieName() {
-    return movieName;
+  public String getMovie_name() {
+    return movie_name;
   }
 
-  public void setMovieName(String movieName) {
-    this.movieName = movieName;
+  public void setMovie_name(String movieName) {
+    this.movie_name = movieName;
   }
 
-  public int getMovieLength() {
-    return movieLength;
+  public int getMovie_length() {
+    return movie_length;
   }
 
-  public void setMovieLength(int movielength) {
-    this.movieLength = movielength;
+  public void setMovie_length(int movielength) {
+    this.movie_length = movielength;
   }
 
   public String getDescription() {
@@ -57,32 +57,32 @@ public class Movie {
     this.genre = genre;
   }
 
-  public String getPgRating() {
-    return pgRating;
+  public String getPg_rating() {
+    return pg_rating;
   }
 
-  public void setPgRating(String PGrating) {
-    this.pgRating = PGrating;
+  public void setPg_rating(String PGrating) {
+    this.pg_rating = PGrating;
   }
 
-  public int getReleaseDate() {
-    return releaseDate;
+  public int getRelease_date() {
+    return release_date;
   }
 
-  public void setReleaseDate(int releaseDate) {
-    this.releaseDate = releaseDate;
+  public void setRelease_date(int releaseDate) {
+    this.release_date = releaseDate;
   }
 
   @Override
   public String toString() {
     return "Movie{" +
             "movieID=" + movieID +
-            ", movieName='" + movieName + '\'' +
-            ", movieLength=" + movieLength +
+            ", movie_name='" + movie_name + '\'' +
+            ", movie_length=" + movie_length +
             ", description='" + description + '\'' +
             ", genre='" + genre + '\'' +
-            ", pgRating='" + pgRating + '\'' +
-            ", releaseDate=" + releaseDate +
+            ", pg_rating='" + pg_rating + '\'' +
+            ", release_date=" + release_date +
             '}';
   }
 }
