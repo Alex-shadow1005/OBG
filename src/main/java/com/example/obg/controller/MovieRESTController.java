@@ -26,7 +26,7 @@ public class MovieRESTController {
   }
 
   @GetMapping("/movie/{id}")
-  public Movie findMovieById(@PathVariable String id) {
+  public Movie findMovieById(@PathVariable Integer id) {
     Optional<Movie> obj = movieRepository.findById(id);
     if (obj.isPresent()) {
       return obj.get();
@@ -40,11 +40,12 @@ public class MovieRESTController {
   @ResponseStatus(HttpStatus.CREATED)
   public Movie postMovie(@RequestBody Movie movie) {
     System.out.println(movie);
+    System.out.println("movie is = " + movie);
     return movieRepository.save(movie);
   }
 
   @PutMapping("/movie/{id}")
-  public ResponseEntity<Movie> updateMovie(@PathVariable String id, @RequestBody Movie movie) {
+  public ResponseEntity<Movie> updateMovie(@PathVariable Integer id, @RequestBody Movie movie) {
     Optional<Movie> optMovie = movieRepository.findById(id);
     if (optMovie.isPresent()) {
       movieRepository.save(movie);
@@ -57,7 +58,7 @@ public class MovieRESTController {
   }
 
   @DeleteMapping("/movie/{id}")
-  public ResponseEntity<String> deleteMovie(@PathVariable String id) {
+  public ResponseEntity<String> deleteMovie(@PathVariable Integer id) {
     try {
       movieRepository.deleteById(id);
       return new ResponseEntity<>("Slettet id=" + id, HttpStatus.OK);

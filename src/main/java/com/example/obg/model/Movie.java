@@ -7,13 +7,13 @@ import javax.persistence.*;
 public class Movie {
 
   @Id
-  @Column(name="movies")
+  @Column(name="movieID")
   private int movieID;
   private String movieName;
-  private int movielength;
+  private int movieLength;
   private String description;
   private String genre;
-  private String PGrating;
+  private String pgRating;
   private int releaseDate;
 
 
@@ -33,12 +33,12 @@ public class Movie {
     this.movieName = movieName;
   }
 
-  public int getMovielength() {
-    return movielength;
+  public int getMovieLength() {
+    return movieLength;
   }
 
-  public void setMovielength(int movielength) {
-    this.movielength = movielength;
+  public void setMovieLength(int movielength) {
+    this.movieLength = movielength;
   }
 
   public String getDescription() {
@@ -57,12 +57,12 @@ public class Movie {
     this.genre = genre;
   }
 
-  public String getPGrating() {
-    return PGrating;
+  public String getPgRating() {
+    return pgRating;
   }
 
-  public void setPGrating(String PGrating) {
-    this.PGrating = PGrating;
+  public void setPgRating(String PGrating) {
+    this.pgRating = PGrating;
   }
 
   public int getReleaseDate() {
@@ -71,6 +71,19 @@ public class Movie {
 
   public void setReleaseDate(int releaseDate) {
     this.releaseDate = releaseDate;
+  }
+
+  @Override
+  public String toString() {
+    return "Movie{" +
+            "movieID=" + movieID +
+            ", movieName='" + movieName + '\'' +
+            ", movieLength=" + movieLength +
+            ", description='" + description + '\'' +
+            ", genre='" + genre + '\'' +
+            ", pgRating='" + pgRating + '\'' +
+            ", releaseDate=" + releaseDate +
+            '}';
   }
 }
 
