@@ -30,6 +30,8 @@ public class Movie {
     this.showings = showings;
   }
 
+
+
   public int getMovieID() {
     return movieID;
   }
