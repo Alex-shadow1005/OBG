@@ -16,12 +16,8 @@ public class Movie {
   private String description;
   private String genre;
   private String pg_rating;
-  private int release_date;
+  private String release_date;
   private String image_link;
-
-
-
-
 
   public int getMovieID() {
     return movieID;
@@ -71,11 +67,11 @@ public class Movie {
     this.pg_rating = PGrating;
   }
 
-  public int getRelease_date() {
+  public String getRelease_date() {
     return release_date;
   }
 
-  public void setRelease_date(int releaseDate) {
+  public void setRelease_date(String releaseDate) {
     this.release_date = releaseDate;
   }
 
@@ -98,7 +94,6 @@ public class Movie {
             ", pg_rating='" + pg_rating + '\'' +
             ", release_date=" + release_date +
             ", image_link='" + image_link + '\'' +
-            ", showings=" + showings +
             '}';
   }
 }
