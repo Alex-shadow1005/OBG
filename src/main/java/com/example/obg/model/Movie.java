@@ -9,7 +9,7 @@ import java.util.Set;
 public class Movie {
 
   @Id
-  @Column(name="movieID")
+  @Column(name = "movieID")
   private int movieID;
   private String movie_name;
   private int movie_length;
@@ -31,16 +31,16 @@ public class Movie {
     return movie_name;
   }
 
-  public void setMovie_name(String movieName) {
-    this.movie_name = movieName;
+  public void setMovie_name(String movie_name) {
+    this.movie_name = movie_name;
   }
 
   public int getMovie_length() {
     return movie_length;
   }
 
-  public void setMovie_length(int movielength) {
-    this.movie_length = movielength;
+  public void setMovie_length(int movie_length) {
+    this.movie_length = movie_length;
   }
 
   public String getDescription() {
@@ -63,16 +63,16 @@ public class Movie {
     return pg_rating;
   }
 
-  public void setPg_rating(String PGrating) {
-    this.pg_rating = PGrating;
+  public void setPg_rating(String pg_rating) {
+    this.pg_rating = pg_rating;
   }
 
   public String getRelease_date() {
     return release_date;
   }
 
-  public void setRelease_date(String releaseDate) {
-    this.release_date = releaseDate;
+  public void setRelease_date(String release_date) {
+    this.release_date = release_date;
   }
 
   public String getImage_link() {
@@ -92,10 +92,9 @@ public class Movie {
             ", description='" + description + '\'' +
             ", genre='" + genre + '\'' +
             ", pg_rating='" + pg_rating + '\'' +
-            ", release_date=" + release_date +
+            ", release_date='" + release_date + '\'' +
             ", image_link='" + image_link + '\'' +
             '}';
   }
 }
-
 
