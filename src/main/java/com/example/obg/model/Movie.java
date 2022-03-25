@@ -19,17 +19,9 @@ public class Movie {
   private int release_date;
   private String image_link;
 
-  @OneToMany
-  @JoinColumn(name="movieID")
-  Set<Showing> showings = new HashSet<>();
 
-  public Set<Showing> getShowings() {
-    return showings;
-  }
 
-  public void setShowings(Set<Showing> showings) {
-    this.showings = showings;
-  }
+
 
   public int getMovieID() {
     return movieID;
