@@ -17,9 +17,7 @@ public class Movie {
   private String genre;
   private String pg_rating;
   private int release_date;
-
-
-
+  //private String image_link;
 
 
   public int getMovieID() {
@@ -78,17 +76,30 @@ public class Movie {
     this.release_date = releaseDate;
   }
 
+ /* public String getImage_link() {
+    return image_link;
+  }
+
+  public void setImage_link(String image_link) {
+    this.image_link = image_link;
+  }
+
+  */
+
+
+
   @Override
   public String toString() {
     return "Movie{" +
-            "movieID=" + movieID +
-            ", movie_name='" + movie_name + '\'' +
-            ", movie_length=" + movie_length +
-            ", description='" + description + '\'' +
-            ", genre='" + genre + '\'' +
-            ", pg_rating='" + pg_rating + '\'' +
-            ", release_date=" + release_date +
-            '}';
+        "movieID=" + movieID +
+        ", movie_name='" + movie_name + '\'' +
+        ", movie_length=" + movie_length +
+        ", description='" + description + '\'' +
+        ", genre='" + genre + '\'' +
+        ", pg_rating='" + pg_rating + '\'' +
+        ", release_date=" + release_date +
+        //", image_link='" + image_link + '\'' +
+        '}';
   }
 }
 
