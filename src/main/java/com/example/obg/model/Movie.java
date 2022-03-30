@@ -17,7 +17,7 @@ public class Movie {
   private String genre;
   private String pg_rating;
   private int release_date;
-  //private String image_link;
+  private String image_link;
 
 
   public int getMovieID() {
@@ -76,7 +76,7 @@ public class Movie {
     this.release_date = releaseDate;
   }
 
- /* public String getImage_link() {
+ public String getImage_link() {
     return image_link;
   }
 
@@ -84,7 +84,7 @@ public class Movie {
     this.image_link = image_link;
   }
 
-  */
+
 
 
 

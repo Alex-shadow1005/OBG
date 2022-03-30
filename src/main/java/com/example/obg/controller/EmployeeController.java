@@ -25,9 +25,9 @@ public class EmployeeController {
 
   //@RequestMapping(method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
   @PostMapping("/loginEmployee")
-  public ResponseEntity<Employee>loginEmployee(@RequestBody Employee employee) throws LoginException, LoginExeption {
-    Employee verifyedEmployee = employeeRepository.findByEmailAndPasswordMatch(employee.getEmail(), employee.getPassword()).orElseThrow(() -> new LoginExeption("Employee not found"));
-    return new ResponseEntity<>(verifyedEmployee, HttpStatus.OK);
+  public Employee loginEmployee(@RequestBody Employee employee) throws LoginExeption {
+    Employee verifyedEmployee = employeeRepository.findByEmailAndPassword(employee.getEmail(), employee.getPassword()).orElseThrow(() -> new LoginExeption("Employee not found"));
+    return verifyedEmployee;
 
   }
 

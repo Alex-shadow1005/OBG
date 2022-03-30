@@ -10,5 +10,5 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
   @Query(value = "select * from employee e where e.email = ? AND e.password = ?" , nativeQuery = true)
 
-  Optional<Employee> findByEmailAndPasswordMatch(String email, String password);
+  Optional<Employee> findByEmailAndPassword(String email, String password);
 }

@@ -11,4 +11,9 @@ public interface ShowingRepository extends JpaRepository<Showing, Integer> {
     @Query(value = "SELECT * FROM kinoMovies.showing " +
                 "where showing_date = :date", nativeQuery = true)
     List<Showing> findByShowingDate(Date date);
+
+    /*@Query(value = "SELECT * FROM kinoMovies.showing s where s.movieid = ?;", nativeQuery = true);
+    List<Showing> findByMovieid(int id);
+
+     */
 }

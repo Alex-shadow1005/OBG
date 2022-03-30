@@ -30,6 +30,16 @@ public class ShowingRESTController {
 
     }
 
+    /*
+    @GetMapping("/showingbyid/{id}")
+    public List<Showing> getShowingsByDate(@PathVariable int id){
+        return showingRepository.findByShowingDate(id);
+
+    }
+
+     */
+
+
 
 
 }
